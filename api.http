@@ -1,0 +1,33 @@
+### Recuperar todas las películas
+GET http://localhost:1234/movies
+
+### Recuperar una película por id
+GET http://localhost:1234/movies/98110048-b652-11ef-b383-3ceef606390f
+### Recuperar todas las películas por un género
+GET http://localhost:1234/movies?genre=ACTION
+
+### Crear una película con POST
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "title": "The Wild Robot",
+  "year": 2024,
+  "director": "I dunno man",
+  "duration": 115,
+  "poster": "https://img.fruugo.com/product/4/49/14441494_max.jpg",
+  "genre": [
+    "Sci-Fi"
+  ]
+}
+
+### Borrar peli por id
+DELETE http://localhost:1234/movies/8d8cf32a-756f-4038-a965-008e95972eec
+
+### Actualizar una película
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+  "year": 2024
+}
